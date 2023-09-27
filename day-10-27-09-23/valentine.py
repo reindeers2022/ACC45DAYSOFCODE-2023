@@ -10,7 +10,7 @@ constraints -
 '''
 import math, sys
 T = int(input())    #asks for number of test cases to run
-userInputs = list()
+userInputs = list() #stores user`s input values
 def nchoco() :
     for i in userInputs :
         X = int(i[0])    #rupees chef has
@@ -21,7 +21,7 @@ if (T in range(1,1001)) :
     while (T != 0) :
         #print(T)
         rawInputs = input()
-        rawInputs = rawInputs.split()
+        rawInputs = rawInputs.split()   #deduces two values from user`s input
         for h in rawInputs :
             if (int(h) in range(1,101)) : pass
             elif (int(h) not in range(1,101)) :
@@ -29,7 +29,7 @@ if (T in range(1,1001)) :
                 sys.exit()
             else : print("something went wrong")
         T = T - 1
-        userInputs.append(rawInputs)
+        userInputs.append(rawInputs)    #adds user`s input values in list
     print("\n")
     nchoco()
 elif (T not in range(1,1001)) :
