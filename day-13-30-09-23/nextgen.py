@@ -18,8 +18,8 @@ constraints -
 1≤A,B,X,Y,≤1000
 '''
 import sys
-T = int(input())
-usrInputs = list()
+T = int(input()) #takes number of test cases to be run
+usrInputs = list()  #will store user`s input
 def fund() :
     for i in usrInputs :
         A = int(i[0])    #generates A units of power each year
@@ -36,14 +36,14 @@ if (T in range(1,1001)) :
         #print(T)
         rawInputs = input()
         rawInputs = rawInputs.split()
-        for h in rawInputs :
+        for h in rawInputs :    #helps with constraints
             if (int(h) not in range(1,1001)) :
                 print("1≤A,B,X,Y,≤1000")
                 sys.exit()
         T = T - 1
-        usrInputs.append(rawInputs)
+        usrInputs.append(rawInputs) #adds user`s input to a list
     print("\n")
-    fund()
+    fund()  #calls a function to print the desired outputs
     #print(usrInputs)
 elif (T not in range(1,1001)) :
     print("1≤T≤1000")
