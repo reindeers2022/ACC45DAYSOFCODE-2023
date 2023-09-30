@@ -15,6 +15,24 @@ Help Chef determine whether the group will get funded assuming that the moon has
 X grams of Helium-3 and 1 gram of Helium-3 can provide Y units of power.
 '''
 T = int(input())
+usrInputs = list()
+def fund() :
+    for i in usrInputs :
+        A = int(i[0])    #generates A units of power each year
+        B = int(i[1])    #to give power for B years
+        X = int(i[2])    #grams of helium-3 on moon
+        Y = int(i[3])    #1g of helium-3 provides Y units of power
+        amtPowerMust = A*B  #amount of power mextgen must supply
+        powerPotential = X*Y    #amount of power nextgen can potentially supply
+        if (powerPotential >= amtPowerMust) : print("YES")
+        elif (powerPotential < amtPowerMust) : print("NO")
+        else : print("something went wrong...")
 while(T != 0) :
     #print(T)
+    rawInputs = input()
+    rawInputs = rawInputs.split()
     T = T - 1
+    usrInputs.append(rawInputs)
+print("\n")
+fund()
+#print(usrInputs)
