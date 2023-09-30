@@ -13,7 +13,11 @@ Chefland by generating at least A units of power each year for the next B years.
 
 Help Chef determine whether the group will get funded assuming that the moon has
 X grams of Helium-3 and 1 gram of Helium-3 can provide Y units of power.
+constraints -
+1≤T≤1000
+1≤A,B,X,Y,≤1000
 '''
+import sys
 T = int(input())
 usrInputs = list()
 def fund() :
@@ -27,12 +31,20 @@ def fund() :
         if (powerPotential >= amtPowerMust) : print("YES")
         elif (powerPotential < amtPowerMust) : print("NO")
         else : print("something went wrong...")
-while(T != 0) :
-    #print(T)
-    rawInputs = input()
-    rawInputs = rawInputs.split()
-    T = T - 1
-    usrInputs.append(rawInputs)
-print("\n")
-fund()
-#print(usrInputs)
+if (T in range(1,1001)) :
+    while(T != 0) :
+        #print(T)
+        rawInputs = input()
+        rawInputs = rawInputs.split()
+        for h in rawInputs :
+            if (int(h) not in range(1,1001)) :
+                print("1≤A,B,X,Y,≤1000")
+                sys.exit()
+        T = T - 1
+        usrInputs.append(rawInputs)
+    print("\n")
+    fund()
+    #print(usrInputs)
+elif (T not in range(1,1001)) :
+    print("1≤T≤1000")
+else : print("something went wrong...")
