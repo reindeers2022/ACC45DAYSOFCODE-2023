@@ -9,7 +9,7 @@ numbered X.
 '''
 import sys
 T = int(input())
-usrInputs = list()
+usrInputs = list()  #stores user inputs
 def jump() :
     for i in usrInputs :
         X = int(i[0])   #wanna reach step no. x
@@ -27,9 +27,9 @@ if (T in range(1,501)) :
                 print("1≤X,Y≤100")
                 sys.exit()
         T = T - 1
-        usrInputs.append(rawInputs)
+        usrInputs.append(rawInputs) #adds user input to list
     #print(usrInputs)
     print("\n")
-    jump()
+    jump()  #calls jump function to get desired outputs
 elif (T not in range(1,501)) : print("1≤T≤500")
 else : print("something went wrong...")
