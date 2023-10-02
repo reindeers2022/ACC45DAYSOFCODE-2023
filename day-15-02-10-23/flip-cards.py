@@ -15,8 +15,10 @@ constraints -
 0≤X≤N
 '''
 import sys
+
 T = int(input())
-usrInput = list()
+usrInput = list()   #stores user`s input
+
 def minFlip() :
     for i in usrInput :
         N = int(i[0])   #total no. of cards
@@ -26,21 +28,27 @@ def minFlip() :
         if (moveFlipUp > moveFlipDown) : print(moveFlipDown)
         elif (moveFlipUp <= moveFlipDown) : print(moveFlipUp)
         else : print("something went wrong...")
+
 if (T in range(1,5001)) :
     while (T != 0) :
         rawInputs = input()
         T = T - 1
         rawInputs = rawInputs.split()
+
+        #keeps input values within the constraints
         if (int(rawInputs[0]) not in range(2,101)) :
                 print("2≤N≤100")
                 sys.exit()
         if (int(rawInputs[1]) not in range(0,int(rawInputs[0])+1)) :
                 print("0≤X≤N")
                 sys.exit()
+
         usrInput.append(rawInputs)
-    #print(usrInput)
+    
     print("\n")
-    minFlip()
+    minFlip()   #calls miniFlip() to print desired values
+
 elif (T not in range(1,5001)) :
     print("1≤T≤5000")
+
 else : print("something went wrong...")
