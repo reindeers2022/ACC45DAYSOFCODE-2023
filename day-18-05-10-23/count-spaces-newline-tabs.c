@@ -12,7 +12,7 @@ int main(void)
   {
     if (c == ' ')
     {
-      ++blanks_nr;
+      ++blanks_nr;  //adds number of spaces to counter
     }
     else if (c == '\t')
     {
