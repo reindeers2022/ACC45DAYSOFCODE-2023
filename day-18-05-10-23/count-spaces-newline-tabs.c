@@ -2,7 +2,7 @@
 /*PROGRAM TO CALCULATE THE TOTAL NUMBERS OF TABS, BLANKS, NEWLINES OF GIVEN TEXT*/
 int main(void)
 {
-  int blanks_nr = 0;
+  int blanks_nr = 0; //sets initial value to zero
   int tabs_nr = 0;
   int newlines_nr = 0;
 
