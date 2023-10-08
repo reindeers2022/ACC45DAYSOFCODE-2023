@@ -1,3 +1,7 @@
+/*
+this is a program that takes two operands as input and prints their Sum
+, Difference, Product, Quotient, Remainder
+*/
 #include <stdio.h>
 int main() {
   int a, b, opt;
