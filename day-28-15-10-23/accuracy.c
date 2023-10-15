@@ -10,11 +10,17 @@ incorrect.
 //firstly make a test cases counter loop
 #include <stdio.h>
 int main() {
-  int cases;
+  int cases, marks[10000], q=0, w, i;
   scanf("%d", &cases);
-  while (cases != 0) {
-    printf("enter case values :%d \n", cases);
-    cases = cases - 1;
+  while (q != cases) {
+    scanf("%d", &w);
+    marks[q] = w;
+    q = q + 1;
+  }
+  
+  printf("\n");
+  for (i = 0; i != cases; i = i + 1) {
+    printf("%d", marks[i], marks[i]);
   }
   return 0;
 }
