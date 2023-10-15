@@ -19,7 +19,12 @@ int incorrect(int arr[], int counter) {
   for (n = 0 ; n != counter; n = n + 1) {
     x = arr[n];
     y = x - (3*(floor(x/3)));
-    printf("%d\n", y);
+    if (y == 0) {
+      printf("%d\n", y);
+    }
+    else if (y != 0) {
+      printf("%d\n", 3-y);
+    }
   }
 
   return 0;
